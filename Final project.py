@@ -12,12 +12,16 @@ clock = pygame.time.Clock()
 
 game_grid = Grid()
 game_grid.print_grid()
+
+
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
-
+            
     screen.fill(dark_blue)
+    game_grid.draw(screen)
+    
     pygame.display.update()
     clock.tick(60)
